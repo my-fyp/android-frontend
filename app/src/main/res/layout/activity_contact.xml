@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".ContactActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="32dp">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/brand_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@id/ivLogo"
+            app:layout_constraintStart_toStartOf="@id/ivLogo"
+            app:layout_constraintTop_toBottomOf="@id/ivLogo" />
+
+        <TextView
+            android:id="@+id/tvSlogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/carme"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:paddingHorizontal="32dp"
+            android:text="@string/use_home_sewa_to_get_best_service_provider_near_by_you"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAppName" />
+
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/carme"
+            android:text="@string/sign_in_or_create_account"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tilPhoneNumber"
+            app:layout_constraintEnd_toEndOf="@id/ivLogo"
+            app:layout_constraintStart_toStartOf="@id/ivLogo"
+            app:layout_constraintTop_toBottomOf="@+id/tvSlogan"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_goneMarginTop="32dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPhoneNumber"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintBottom_toTopOf="@id/btnContinue"
+            app:layout_constraintTop_toBottomOf="@id/tvSignUp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_phone_number"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/continue_now"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@id/tilPhoneNumber" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="32dp"
+            android:background="@android:color/darker_gray"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/btnLogin"
+            app:layout_constraintTop_toBottomOf="@id/btnContinue" />
+
+        <TextView
+            android:id="@+id/tvOr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingHorizontal="16dp"
+            android:text="@string/or"
+            app:layout_constraintBottom_toBottomOf="@id/view"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toTopOf="@id/view" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/sign_in_now"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+
+
+

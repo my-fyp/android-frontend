@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Home Service</string>
+    <string name="login">login</string>
+    <string name="register">Register</string>
+    <string name="FirstName">FirstName</string>
+    <string name="last_Name">lastName</string>
+    <string name="Address">Address</string>
+    <string name="Password">Password</string>
+    <string name="Confirm_Password">Confirm_Password</string>
+    <string name="Gender">Gender</string>
+    <string name="Customer_type">Customer_Type</string>
+    <string name="use_home_sewa_to_get_best_service_provider_near_by_you">Use home sewa to get best service provider near by you.</string>
+    <string name="sign_in_or_create_account">Sign in or create an account</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="continue_now">Continue</string>
+    <string name="or_sing_in">or sing in</string>
+    <string name="sign_in_now">Sign In Now</string>
+    <string name="otp_code_text">We have send OTP code to your phone number. Please, enter below to verify</string>
+    <string name="verify">Verify</string>
+    <string name="none">None</string>
+    <string name="sign_in">Sign in</string>
+    <string name="enter_contact">Enter contact</string>
+    <string name="or">or</string>
+    <string name="don_t_have_an_account_sign_up">Create new account</string>
 </resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="32dp"
+    tools:context=".OtpCodeActivity">
+
+    <TextView
+        android:id="@+id/tvPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:text="@string/otp_code_text"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/pvOtp"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:cursorVisible="true"
+        android:focusable="true"
+        android:inputType="number"
+        app:itemCount="4"
+        app:itemRadius="8dp"
+        app:itemSpacing="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPin"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/verify"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/pvOtp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

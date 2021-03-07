@@ -22,4 +22,8 @@
     <string name="enter_contact">Enter contact</string>
     <string name="or">or</string>
     <string name="don_t_have_an_account_sign_up">Create new account</string>
+    <string name="customer">Customer</string>
+    <string name="vendor">Vendor</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>

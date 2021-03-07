@@ -105,6 +105,27 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
+
+        <RadioGroup
+            android:id="@+id/Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/radioCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/customer"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radioVendor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vendor" />
+
+        </RadioGroup>
+
         <Button
             android:id="@+id/btn_register"
             android:layout_width="match_parent"
@@ -116,20 +137,9 @@
             android:textColor="@android:color/white"
             android:text="@string/register"/>
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_above="@id/swipeLeft"
-            android:layout_centerHorizontal="true"/>
 
-        <TextView
-            android:id="@+id/swipeLeft"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp"/>
+
+
 
     </RelativeLayout>
 

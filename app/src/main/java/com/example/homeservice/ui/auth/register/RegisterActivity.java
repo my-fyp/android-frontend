@@ -1,4 +1,4 @@
-package com.example.homeservice;
+package com.example.homeservice.ui.auth.register;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,12 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import com.example.homeservice.R;
 
 public class RegisterActivity extends AppCompatActivity {
     private RadioButton btn1;
-    private  RadioButton btn2;
+    private RadioButton btn2;
     private Button register;
 
 
@@ -21,16 +22,15 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        btn1=(RadioButton)findViewById(R.id.radioCustomer);
-        btn2=(RadioButton)findViewById(R.id.radioVendor);
-        register=(Button)findViewById(R.id.btn_register);
+        btn1 = (RadioButton) findViewById(R.id.radioCustomer);
+        btn2 = (RadioButton) findViewById(R.id.radioVendor);
+        register = (Button) findViewById(R.id.btn_register);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(),NavDrawer.class);
-                startActivity(i);
-                Toast.makeText(RegisterActivity.this, "welcome ", Toast.LENGTH_SHORT).show();
+                //Intent intent = new Intent(getApplicationContext(), NavDrawer.class);
+                //startActivity(intent);\
             }
         });
     }

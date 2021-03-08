@@ -4,4 +4,13 @@
     <dimen name="dp_8_x_8">64dp</dimen>
     <dimen name="dp_8_x_2">64dp</dimen>
     <dimen name="dp_8_x_10">64dp</dimen>
+    <dimen name="dp_8_x_15">64dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
 </resources>

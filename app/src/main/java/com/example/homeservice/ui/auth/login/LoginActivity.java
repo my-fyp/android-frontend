@@ -1,8 +1,10 @@
-package com.example.homeservice;
+package com.example.homeservice.ui.auth.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.homeservice.R;
 
 public class LoginActivity extends AppCompatActivity {
 

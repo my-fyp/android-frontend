@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".LoginActivity">
+    tools:context=".ui.auth.login.LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -70,7 +70,17 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/enter_contact"
                 android:inputType="textPassword" />
+
         </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
 
         <Button
             android:id="@+id/btnSignIn"

@@ -1,10 +1,12 @@
-package com.example.homeservice;
+package com.example.homeservice.ui.auth.register;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+
+import com.example.homeservice.R;
+import com.example.homeservice.ui.auth.login.LoginActivity;
 
 public class ContactActivity extends AppCompatActivity {
 

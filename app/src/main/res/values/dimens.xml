@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="dp_8_x_3">24dp</dimen>
+    <dimen name="dp_8_x_5">24dp</dimen>
     <dimen name="dp_8_x_8">64dp</dimen>
     <dimen name="dp_8_x_2">64dp</dimen>
     <dimen name="dp_8_x_10">64dp</dimen>

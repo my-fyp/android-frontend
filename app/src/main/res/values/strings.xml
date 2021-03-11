@@ -54,4 +54,6 @@
     <string name="bookings">Project</string>
     <string name="search">Search</string>
     <string name="notification">Alert</string>
+    <string name="LogOut">Log Out</string>
+    <string name="Communicate">communicate</string>
 </resources>

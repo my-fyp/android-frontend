@@ -10,6 +10,7 @@
         android:title="@string/search" />
     <item
         android:id="@+id/placeHolder"
+        android:checkable="false"
         android:title="" />
     <item
         android:id="@+id/action_booking"

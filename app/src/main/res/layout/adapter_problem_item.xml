@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivVendorImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_image_view"
+            android:src="@drawable/brand_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvAddedDate"
+            app:layout_constraintStart_toEndOf="@+id/ivVendorImage"
+            app:layout_constraintTop_toTopOf="@id/ivVendorImage"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="App Name" />
+
+        <TextView
+            android:id="@+id/tvAddedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivVendorImage"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            tools:text="21 Jan, 2021" />
+
+        <TextView
+            android:id="@+id/ivDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/ivVendorImage"
+            app:layout_constraintTop_toBottomOf="@id/ivVendorImage"
+            tools:text="Hello there, I'm description" />
+
+        <ImageView
+            android:id="@+id/ivOfferImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:adjustViewBounds="true"
+            android:background="#D6D3D3"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toBottomOf="@id/ivDescription"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/cat" />
+
+        <ImageView
+            android:id="@+id/ivCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_baseline_call_24"
+            app:layout_constraintStart_toStartOf="@id/ivVendorImage"
+            app:layout_constraintTop_toBottomOf="@id/ivOfferImage"
+            app:tint="@color/black"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/ivMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            app:layout_constraintBottom_toBottomOf="@id/ivCall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivCall"
+            app:tint="@color/black"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

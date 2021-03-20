@@ -1,4 +1,4 @@
-package com.example.homeservice.ui.alert;
+package com.example.homeservice.ui.explore.offer;
 
 import android.os.Bundle;
 
@@ -13,34 +13,30 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.homeservice.R;
-import com.example.homeservice.service.NotificationService;
+import com.example.homeservice.service.OfferService;
 
 import dummydata.DummyData;
 
-
-public class AlertFragment extends Fragment {
-    private RecyclerView rvNotification;
+public class OffersFragment extends Fragment {
+    private RecyclerView rvOffers;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_alert, container, false);
+        return inflater.inflate(R.layout.fragment_offers, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        DummyData.populateNotification();
         uiInit(view);
-        setupAdapter();
-    }
+        DummyData.populateOffer();
 
-    private void setupAdapter() {
-        rvNotification.setLayoutManager(new LinearLayoutManager(getContext()));
-        rvNotification.setAdapter(new AlertAdapter(NotificationService.notifications));
+        rvOffers.setLayoutManager(new LinearLayoutManager(requireContext()));
+        rvOffers.setAdapter(new OfferAdapter(OfferService.offers));
     }
 
     private void uiInit(View view) {
-        rvNotification = view.findViewById(R.id.rvNotification);
+        rvOffers = view.findViewById(R.id.rvOffer);
     }
 }

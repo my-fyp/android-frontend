@@ -39,7 +39,7 @@
                 android:id="@+id/bottomNavView"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 app:elevation="0dp"
                 app:labelVisibilityMode="labeled"
                 app:menu="@menu/bottom_nav_view" />

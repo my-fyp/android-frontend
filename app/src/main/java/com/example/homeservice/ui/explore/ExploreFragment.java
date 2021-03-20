@@ -13,13 +13,13 @@ import android.view.ViewGroup;
 
 import com.example.homeservice.R;
 import com.example.homeservice.helper.ViewPagerAdapter;
-import com.example.homeservice.ui.alert.AlertFragment;
+import com.example.homeservice.ui.explore.offer.OffersFragment;
+import com.example.homeservice.ui.explore.problem.ProblemFragment;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class ExploreFragment extends Fragment {
     private final ArrayList<Fragment> fragments = new ArrayList<>();
@@ -41,7 +41,7 @@ public class ExploreFragment extends Fragment {
         initViews(view);
 
         fragments.add(new OffersFragment());
-        fragments.add(new PromosFragment());
+        fragments.add(new ProblemFragment());
         ViewPagerAdapter pagerAdapter = new ViewPagerAdapter(requireActivity(), fragments);
         viewPager.setAdapter(pagerAdapter);
         new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> tab.setText(fragmentNames.get(position))).attach();

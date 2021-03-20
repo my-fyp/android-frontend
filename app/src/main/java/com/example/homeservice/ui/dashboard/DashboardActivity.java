@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentManager;
 
 import com.example.homeservice.R;
 import com.example.homeservice.ui.alert.AlertFragment;
+import com.example.homeservice.ui.auth.login.LoginActivity;
 import com.example.homeservice.ui.explore.ExploreFragment;
 import com.example.homeservice.ui.profile.ProfileActivity;
 import com.example.homeservice.ui.project.ProjectFragment;
@@ -48,6 +49,15 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         drawer.addDrawerListener(toggle);
         navigationView.setNavigationItemSelectedListener(this);
         toggle.syncState();
+
+        onLogOut();
+    }
+
+    private void onLogOut() {
+        findViewById(R.id.clLogout).setOnClickListener(v -> {
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+        });
     }
 
     private void placeFragment() {

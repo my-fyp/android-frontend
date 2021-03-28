@@ -52,7 +52,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/enter_contact"
-                android:inputType="phone" />
+                android:inputType="phone"
+                android:text="admin" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -69,18 +70,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/enter_contact"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:text="admin" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
-
-
-
-
-
 
         <Button
             android:id="@+id/btnSignIn"

@@ -29,8 +29,6 @@ public class RegisterActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(getApplicationContext(), NavDrawer.class);
-                //startActivity(intent);\
             }
         });
     }

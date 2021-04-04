@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 public class LoginResponse {
 
     @SerializedName("result")
-    private Result result;
+    private LoginResult loginResult;
 
     @SerializedName("message")
     private String message;
@@ -13,12 +13,12 @@ public class LoginResponse {
     @SerializedName("status")
     private boolean status;
 
-    public void setResult(Result result) {
-        this.result = result;
+    public void setLoginResult(LoginResult loginResult) {
+        this.loginResult = loginResult;
     }
 
-    public Result getResult() {
-        return result;
+    public LoginResult getLoginResult() {
+        return loginResult;
     }
 
     public void setMessage(String message) {

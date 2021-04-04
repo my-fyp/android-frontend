@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.homeservice.R;
 import com.example.homeservice.model.BookingModel;
-import com.example.homeservice.ui.explore.offer.OfferAdapter;
 
 import java.util.ArrayList;
 
@@ -30,14 +29,14 @@ public class BookingAdapter  extends RecyclerView.Adapter<BookingAdapter.MyViewH
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BookingAdapter.MyViewHolder holder, int position) {
-
-
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        BookingModel booking = bookings.get(position);
+       // holder.description.setText(booking.getBookingDescription());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return bookings.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

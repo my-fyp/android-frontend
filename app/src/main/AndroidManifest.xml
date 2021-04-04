@@ -4,6 +4,7 @@
     package="com.example.homeservice">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".MyApp"
         android:allowBackup="true"
@@ -15,43 +16,38 @@
         android:usesCleartextTraffic="true"
         tools:ignore="UnusedAttribute">
         <activity
-            android:name=".ui.dashboard.DashboardActivity"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.HomeService.NoActionBar">
-            <!--<intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
-        </activity>
-        <activity android:name=".ui.profile.ProfileActivity" />
+            android:name=".ui.auth.register.UserTypeActivity"
+            android:theme="@style/Theme.HomeService.NoActionBar"/>
         <activity
-            android:name=".ui.auth.login.LoginActivity"
-            android:theme="@style/Theme.HomeService.NoActionBar"
-            android:windowSoftInputMode="stateVisible|adjustResize">
+            android:name=".ui.splashscreen.SplashScreenActivity"
+            android:theme="@style/Theme.HomeService.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.dashboard.DashboardActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.HomeService.NoActionBar" />
+        <activity android:name=".ui.profile.ProfileActivity" />
+        <activity
+            android:name=".ui.auth.login.LoginActivity"
+            android:theme="@style/Theme.HomeService.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity
             android:name=".ui.auth.register.OtpCodeActivity"
             android:theme="@style/Theme.HomeService.NoActionBar"
             android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity
             android:name=".ui.auth.register.RegisterActivity"
-            android:theme="@style/Theme.HomeService.NoActionBar" />
+            android:theme="@style/Theme.HomeService.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.auth.register.ContactActivity"
             android:theme="@style/Theme.HomeService.NoActionBar"
-            android:windowSoftInputMode="stateVisible|adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:windowSoftInputMode="stateVisible|adjustResize" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -1,4 +1,4 @@
-package com.example.homeservice.ui;
+package com.example.homeservice.ui.splashscreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,6 @@ import android.os.Bundle;
 
 import com.example.homeservice.R;
 import com.example.homeservice.helper.Prefs;
-import com.example.homeservice.ui.auth.login.LoginActivity;
 import com.example.homeservice.ui.auth.register.ContactActivity;
 import com.example.homeservice.ui.dashboard.DashboardActivity;
 

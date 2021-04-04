@@ -6,7 +6,7 @@
     <string name="last_Name">lastName</string>
     <string name="Address">Address</string>
     <string name="Password">Password</string>
-    <string name="Confirm_Password">Confirm_Password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="Gender">Gender</string>
     <string name="Customer_type">Customer_Type</string>
     <string name="use_home_sewa_to_get_best_service_provider_near_by_you">Use home sewa to get best service provider near by you.</string>
@@ -19,7 +19,7 @@
     <string name="verify">Verify</string>
     <string name="none">None</string>
     <string name="sign_in">Sign in</string>
-    <string name="enter_contact">Enter contact</string>
+    <string name="enter_contact">Phone number</string>
     <string name="or">or</string>
     <string name="don_t_have_an_account_sign_up">Create new account</string>
     <string name="customer">Customer</string>
@@ -56,4 +56,18 @@
     <string name="notification">Alert</string>
     <string name="LogOut">Log Out</string>
     <string name="Communicate">communicate</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="enter_address">Enter address</string>
+    <string name="already_have_an_account_login">Already have an account? login</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="which_best_describes_you">Which best describes you?</string>
+    <string name="service_user">Service User</string>
+    <string name="service_giver">Service Provider</string>
+    <string name="service_giver_are">Service providers are those who are here to work, provide services to customers.</string>
+    <string name="service_users_can">Service users can use different available services and post problems.</string>
+    <string name="please_fill_up_the_form_below">Please fill up the form below.</string>
+    <string name="next">Next</string>
 </resources>

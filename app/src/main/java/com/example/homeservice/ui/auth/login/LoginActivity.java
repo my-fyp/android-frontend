@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.homeservice.api.AuthApis;
 import com.example.homeservice.databinding.ActivityLoginBinding;
+import com.example.homeservice.helper.Prefs;
 import com.example.homeservice.helper.RetrofitInstance;
 import com.example.homeservice.model.login.LoginResponse;
 import com.example.homeservice.ui.auth.register.ContactActivity;
@@ -33,28 +35,37 @@ public class LoginActivity extends AppCompatActivity {
         binding.btnSignUp.setOnClickListener(v -> {
             startActivity(new Intent(this, ContactActivity.class));
         });
-
         onLogin();
     }
 
     private void onLogin() {
         binding.btnSignIn.setOnClickListener(v -> {
+            binding.btnSignIn.setEnabled(false);
+            binding.loading.setVisibility(View.VISIBLE);
 
             Map<String, String> request = new HashMap<>();
             request.put("username", binding.etContact.getText().toString());
             request.put("password", binding.etPassword.getText().toString());
 
-            AuthApis api = RetrofitInstance.getInstance().create(AuthApis.class);
+            AuthApis api = RetrofitInstance.getInstance(this).create(AuthApis.class);
 
             Call<LoginResponse> call = api.loginUser(request);
             call.enqueue(new Callback<LoginResponse>() {
                 @Override
                 public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                    binding.btnSignIn.setEnabled(true);
+                    binding.loading.setVisibility(View.INVISIBLE);
                     try {
-                        String name = response.body().getResult().getName();
-                        Toast.makeText(LoginActivity.this, name, Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
-                        finish();
+                        if (response.body().isStatus()) {
+                            Prefs.setIsLoggedIn();
+                            Prefs.setProfileDetails(response.body().getLoginResult());
+
+                            Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
                     } catch (Exception ex) {
                         Toast.makeText(LoginActivity.this, "Invalid user", Toast.LENGTH_SHORT).show();
                     }
@@ -62,6 +73,8 @@ public class LoginActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<LoginResponse> call, Throwable t) {
+                    binding.btnSignIn.setEnabled(true);
+                    binding.loading.setVisibility(View.INVISIBLE);
                     Toast.makeText(LoginActivity.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             });

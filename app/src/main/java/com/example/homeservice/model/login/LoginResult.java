@@ -2,7 +2,7 @@ package com.example.homeservice.model.login;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Result{
+public class LoginResult {
 
 	@SerializedName("address")
 	private String address;

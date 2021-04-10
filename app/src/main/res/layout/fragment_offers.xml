@@ -5,8 +5,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.explore.offer.OffersFragment">
 
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/offer_problem_shimmer" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvOffer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:itemCount="3"
+        tools:listitem="@layout/adapter_offer_item"
+        tools:visibility="gone" />
 </androidx.constraintlayout.widget.ConstraintLayout>

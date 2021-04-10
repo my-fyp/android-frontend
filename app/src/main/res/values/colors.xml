@@ -13,5 +13,6 @@
 
     <color name="green_selected">#334CAF50</color>
     <color name="green_unselected">#0D4CAF50</color>
+    <color name="shimmer_color">#989697</color>
 
 </resources>

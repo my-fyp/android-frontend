@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivVendorImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            android:background="@color/shimmer_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/tvName"
+            android:layout_width="200dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/shimmer_bg"
+            app:layout_constraintBottom_toTopOf="@id/tvAddedDate"
+            app:layout_constraintStart_toEndOf="@+id/ivVendorImage"
+            app:layout_constraintTop_toTopOf="@id/ivVendorImage"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tvAddedDate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/shimmer_bg"
+            app:layout_constraintBottom_toBottomOf="@id/ivVendorImage"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+        <LinearLayout
+            android:id="@+id/ivDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/ivVendorImage"
+            app:layout_constraintTop_toBottomOf="@id/ivVendorImage">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:background="@drawable/shimmer_bg" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shimmer_bg" />
+
+            <View
+                android:layout_width="200dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shimmer_bg" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/ivOfferImage"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/shimmer_bg"
+            app:layout_constraintTop_toBottomOf="@id/ivDescription" />
+
+        <View
+            android:id="@+id/ivCall"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shimmer_bg"
+            app:layout_constraintStart_toStartOf="@id/ivVendorImage"
+            app:layout_constraintTop_toBottomOf="@id/ivOfferImage" />
+
+        <View
+            android:id="@+id/ivSave"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shimmer_bg"
+            app:layout_constraintBottom_toBottomOf="@id/ivCall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivCall" />
+
+        <View
+            android:id="@+id/ivMore"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shimmer_bg"
+            app:layout_constraintEnd_toEndOf="@id/ivSave"
+            app:layout_constraintTop_toTopOf="@id/ivVendorImage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

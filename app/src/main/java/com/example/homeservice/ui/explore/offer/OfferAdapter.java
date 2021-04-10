@@ -12,17 +12,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.homeservice.R;
+import com.example.homeservice.helper.DateFormatter;
 import com.example.homeservice.helper.GlideOption;
-import com.example.homeservice.model.OfferModel;
+import com.example.homeservice.model.offer.OfferResponse;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class OfferAdapter extends RecyclerView.Adapter<OfferAdapter.MyViewHolder> {
-    private final ArrayList<OfferModel> offers;
+    private final List<OfferResponse> offers;
 
-    public OfferAdapter(ArrayList<OfferModel> offers) {
+    public OfferAdapter(List<OfferResponse> offers) {
         this.offers = offers;
     }
 
@@ -37,17 +38,17 @@ public class OfferAdapter extends RecyclerView.Adapter<OfferAdapter.MyViewHolder
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Context context = holder.itemView.getContext();
-        OfferModel offer = offers.get(position);
-        holder.description.setText(offer.getOfferDescription());
-        holder.vendorName.setText(offer.getVendorName());
-        holder.addedDate.setText(offer.getOfferPostedDate());
+        OfferResponse offer = offers.get(position);
+        holder.description.setText(offer.getDescription());
+        holder.vendorName.setText(offer.getName());
+        holder.addedDate.setText(DateFormatter.formatDate(offer.getCreatedAt(), "dd MMM, yy - hh:mm"));
 
         Glide.with(context)
                 .load(offer.getOfferImage())
                 .apply(GlideOption.getRequestOption())
                 .into(holder.offerImage);
         Glide.with(context)
-                .load(offer.getVendorImage())
+                .load(offer.getProfileImage())
                 .apply(GlideOption.getRequestOption())
                 .into(holder.vendorImage);
     }

@@ -39,10 +39,13 @@ public class RegisterActivity extends AppCompatActivity {
 
         binding.rbMale.setChecked(true);
 
+
         onRadioBtnChange();
         binding.btnRegister.setOnClickListener(v -> {
             int selectedGenderId = binding.rbgParent.getCheckedRadioButtonId();
             RadioButton radioButton = findViewById(selectedGenderId);
+
+
 
             Map<String, String> request = new HashMap<>();
             request.put("username", getContact());
@@ -103,5 +106,6 @@ public class RegisterActivity extends AppCompatActivity {
                 binding.rbMale.setBackgroundResource(R.drawable.radio_bg);
             }
         });
+
     }
 }

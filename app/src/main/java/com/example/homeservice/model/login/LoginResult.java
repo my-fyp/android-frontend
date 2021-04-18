@@ -4,69 +4,80 @@ import com.google.gson.annotations.SerializedName;
 
 public class LoginResult {
 
-	@SerializedName("address")
-	private String address;
+    @SerializedName("address")
+    private String address;
 
-	@SerializedName("name")
-	private String name;
+    @SerializedName("name")
+    private String name;
 
-	@SerializedName("userType")
-	private String userType;
+    @SerializedName("userType")
+    private String userType;
 
-	@SerializedName("userId")
-	private int userId;
+    @SerializedName("userId")
+    private int userId;
 
-	@SerializedName("phoneNo")
-	private String phoneNo;
+    @SerializedName("accessId")
+    private int accessId;
 
-	@SerializedName("username")
-	private String username;
+    @SerializedName("phoneNo")
+    private String phoneNo;
 
-	public void setAddress(String address){
-		this.address = address;
-	}
+    @SerializedName("username")
+    private String username;
 
-	public String getAddress(){
-		return address;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-	public void setName(String name){
-		this.name = name;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public String getName(){
-		return name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setUserType(String userType){
-		this.userType = userType;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getUserType(){
-		return userType;
-	}
+    public void setUserType(String userType) {
+        this.userType = userType;
+    }
 
-	public void setUserId(int userId){
-		this.userId = userId;
-	}
+    public String getUserType() {
+        return userType;
+    }
 
-	public int getUserId(){
-		return userId;
-	}
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
 
-	public void setPhoneNo(String phoneNo){
-		this.phoneNo = phoneNo;
-	}
+    public int getUserId() {
+        return userId;
+    }
 
-	public String getPhoneNo(){
-		return phoneNo;
-	}
+    public void setAccessId(int accessId) {
+        this.accessId = accessId;
+    }
 
-	public void setUsername(String username){
-		this.username = username;
-	}
+    public int getAccessId() {
+        return accessId;
+    }
 
-	public String getUsername(){
-		return username;
-	}
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getUsername() {
+        return username;
+    }
 }

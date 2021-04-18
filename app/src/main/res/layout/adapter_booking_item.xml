@@ -4,46 +4,139 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:elevation="4dp"
-    app:cardCornerRadius="8dp"
-    app:cardUseCompatPadding="true">
+    android:layout_marginTop="8dp"
+    app:cardBackgroundColor="#42BC47"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="@dimen/dp_8_x_1">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="397dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="12dp">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/CustomerId"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_margin="@dimen/dp_8_x_1"
-            android:background="@drawable/bg_image_view"
-            android:src="@drawable/brand_logo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+        android:layout_marginStart="@dimen/dp_8_x_1"
+        android:background="@drawable/cl_round_bg"
+        android:padding="@dimen/dp_8_x_1">
 
         <TextView
-            android:id="@+id/tvName"
+            android:id="@+id/tvServiceType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Plumbing" />
+
+        <View
+            android:id="@+id/viewDividerOne"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_8_x_1"
+            android:background="@color/opacity_black"
+            app:layout_constraintBottom_toTopOf="@id/civVendorProfile"
+            app:layout_constraintTop_toBottomOf="@id/tvServiceType" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civVendorProfile"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="@dimen/dp_8_x_2"
+            android:background="@drawable/bg_text_cirle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewDividerOne" />
+
+        <TextView
+            android:id="@+id/tvVendorName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_8_x_2"
-            android:text="App Name"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="@dimen/mini_text"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/tvBookingDate" />
+            app:layout_constraintBottom_toTopOf="@+id/tvContact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/civVendorProfile"
+            app:layout_constraintTop_toTopOf="@id/civVendorProfile"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Prachan Ghale" />
 
         <TextView
-            android:id="@+id/tvBookingDate"
+            android:id="@+id/tvContact"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/mini_small_text"
+            app:layout_constraintBottom_toBottomOf="@id/civVendorProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/tvVendorName"
+            app:layout_constraintTop_toBottomOf="@id/tvVendorName"
+            tools:text="9846354125" />
+
+        <TextView
+            android:id="@+id/tvBookedOn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8_x_3"
+            android:text="@string/booked_on"
             android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/mini_small_text"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/civVendorProfile"
+            app:layout_constraintTop_toBottomOf="@id/tvContact" />
 
+        <TextView
+            android:id="@+id/tvBookedOnDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/mini_small_text"
+            app:layout_constraintEnd_toStartOf="@id/viewLine"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/civVendorProfile"
+            app:layout_constraintTop_toBottomOf="@id/tvBookedOn"
+            tools:text="21, Jan-2021" />
 
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dp_8_x_3"
+            android:background="@color/purple_500"
+            app:layout_constraintBottom_toBottomOf="@id/tvBookedOnDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvBookedOn" />
+
+        <TextView
+            android:id="@+id/tvServiceOn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/service_on"
+            android:textColor="@color/black"
+            android:textSize="@dimen/mini_small_text"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvBookedOn" />
+
+        <TextView
+            android:id="@+id/tvServiceOnDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/mini_small_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@id/viewLine"
+            app:layout_constraintTop_toBottomOf="@id/tvServiceOn"
+            tools:text="21, Jan-2021" />
+
+        <Button
+            android:id="@+id/btnViewDetails"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8_x_2"
+            android:text="@string/view_details"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/tvServiceOnDate" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

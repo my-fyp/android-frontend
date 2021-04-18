@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/enter_contact"
                 android:inputType="phone"
-                android:text="admin" />
+                android:text="9846356410" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout

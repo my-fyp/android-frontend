@@ -58,7 +58,7 @@ public class OffersFragment extends Fragment {
                 try {
                     setUpRecyclerView(response.body());
                 } catch (Exception ex) {
-                    Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(requireContext(), ex.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
 

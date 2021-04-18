@@ -1,32 +1,29 @@
-package com.example.homeservice.model.offer;
+package com.example.homeservice.model.problem;
 
 import com.google.gson.annotations.SerializedName;
 
-public class OfferResponse{
+public class ProblemResponse{
 
 	@SerializedName("createdAt")
 	private String createdAt;
 
-	@SerializedName("offerImage")
-	private String offerImage;
-
-	@SerializedName("validDate")
-	private String validDate;
+	@SerializedName("customerId")
+	private int customerId;
 
 	@SerializedName("name")
 	private String name;
 
-	@SerializedName("offerId")
-	private int offerId;
-
 	@SerializedName("description")
 	private String description;
 
-	@SerializedName("vendorId")
-	private int vendorId;
+	@SerializedName("problemImage")
+	private String problemImage;
 
 	@SerializedName("profileImage")
 	private String profileImage;
+
+	@SerializedName("problemId")
+	private int problemId;
 
 	@SerializedName("phoneNo")
 	private String phoneNo;
@@ -35,32 +32,28 @@ public class OfferResponse{
 		return createdAt;
 	}
 
-	public String getOfferImage(){
-		return offerImage;
-	}
-
-	public String getValidDate(){
-		return validDate;
+	public int getCustomerId(){
+		return customerId;
 	}
 
 	public String getName(){
 		return name;
 	}
 
-	public int getOfferId(){
-		return offerId;
-	}
-
 	public String getDescription(){
 		return description;
 	}
 
-	public int getVendorId(){
-		return vendorId;
+	public String getProblemImage(){
+		return problemImage;
 	}
 
 	public String getProfileImage(){
 		return profileImage;
+	}
+
+	public int getProblemId(){
+		return problemId;
 	}
 
 	public String getPhoneNo(){

@@ -10,17 +10,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.homeservice.R;
-import com.example.homeservice.model.OfferModel;
-import com.example.homeservice.model.ProblemModel;
+import com.example.homeservice.helper.DateFormatter;
+import com.example.homeservice.model.problem.ProblemResponse;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProblemAdapter extends RecyclerView.Adapter<ProblemAdapter.MyViewHolder> {
-    private final ArrayList<ProblemModel> problems;
+    private final List<ProblemResponse> problems;
 
-    public ProblemAdapter(ArrayList<ProblemModel> problems) {
+    public ProblemAdapter(List<ProblemResponse> problems) {
         this.problems = problems;
     }
 
@@ -34,12 +34,12 @@ public class ProblemAdapter extends RecyclerView.Adapter<ProblemAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        ProblemModel problem = problems.get(position);
-        holder.description.setText(problem.getOfferDescription());
-        holder.vendorName.setText(problem.getVendorName());
-        holder.addedDate.setText(problem.getOfferPostedDate());
-        holder.offerImage.setImageResource(problem.getOfferImage());
-        holder.vendorImage.setImageResource(problem.getVendorImage());
+        ProblemResponse problem = problems.get(position);
+        holder.description.setText(problem.getDescription());
+        holder.addedDate.setText(DateFormatter.formatDate(problem.getCreatedAt(), "dd MMM, yy - hh:mm"));;
+
+        //holder.problemImage.setImageResource(problem.getProblemImage());
+        //holder.vendorImage.setImageResource(problem.im());
     }
 
     @Override

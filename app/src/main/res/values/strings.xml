@@ -70,4 +70,13 @@
     <string name="service_users_can">Service users can use different available services and post problems.</string>
     <string name="please_fill_up_the_form_below">Please fill up the form below.</string>
     <string name="next">Next</string>
+    <string name="description">Description</string>
+    <string name="service_address">Service Address</string>
+    <string name="service_date">Service Date</string>
+    <string name="booking_date">Booking Date</string>
+    <string name="total_price">Total Price</string>
+    <string name="cancel_request">Cancel Booking</string>
+    <string name="booked_on">Booked On</string>
+    <string name="service_on">Service On</string>
+    <string name="view_details">View Details</string>
 </resources>

@@ -9,4 +9,10 @@ public class GlideOption {
                 .placeholder(R.drawable.loading)
                 .error(R.drawable.ic_baseline_broken_image_24);
     }
+
+    public static RequestOptions getPersonReqOption() {
+        return new RequestOptions()
+                .placeholder(R.drawable.loading)
+                .error(R.drawable.ic_filled_person);
+    }
 }

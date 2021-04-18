@@ -3,21 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.explore.problem.ProblemFragment">
+    tools:context=".ui.explore.offer.OffersFragment">
 
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
-        <include layout="@layout/offer_problem_shimmer"/>
+        <include layout="@layout/offer_problem_shimmer" />
     </com.facebook.shimmer.ShimmerFrameLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvProblem"
+        android:id="@+id/rvRequest"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:itemCount="3"
-        tools:listitem="@layout/adapter_problem_item"
-        tools:visibility="gone" />
+        tools:itemCount="2"
+        tools:listitem="@layout/adapter_request_item"
+        tools:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>

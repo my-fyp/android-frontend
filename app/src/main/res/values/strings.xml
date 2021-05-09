@@ -79,4 +79,11 @@
     <string name="booked_on">Booked On</string>
     <string name="service_on">Service On</string>
     <string name="view_details">View Details</string>
+    <string name="search_text">search_text</string>
+    <string name="Home_specilist">Home Specialist</string>
+    <string name="photographer">Photographer</string>
+    <string name="electrian">Electrican</string>
+    <string name="plumber">plumber</string>
+    <string name="recommendation">Recommendations</string>
+    <string name="user_name">User_name</string>
 </resources>

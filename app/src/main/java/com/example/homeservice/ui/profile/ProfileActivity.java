@@ -1,6 +1,7 @@
 package com.example.homeservice.ui.profile;
 
 import android.os.Bundle;
+import android.widget.Toolbar;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,15 +32,17 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         initViews();
-        fragments.add(new OffersFragment());
-        fragments.add(new ProblemFragment());
+
+        fragments.add(new AboutFragment());
+        fragments.add(new FeedbackFragment());
+        fragments.add(new PostFragment());
         ViewPagerAdapter pagerAdapter = new ViewPagerAdapter(this, fragments);
         viewPager.setAdapter(pagerAdapter);
         new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> tab.setText(fragmentNames.get(position))).attach();
     }
 
     private void initViews() {
-        viewPager = findViewById(R.id.exploreViewPager);
+        viewPager = findViewById(R.id.ProfileViewPager);
         tabLayout = findViewById(R.id.tablayout);
     }
 

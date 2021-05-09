@@ -15,9 +15,10 @@
         android:theme="@style/Theme.HomeService"
         android:usesCleartextTraffic="true"
         tools:ignore="UnusedAttribute">
+        <activity android:name=".ui.favourite.FavouriteActivity"></activity>
         <activity
             android:name=".ui.auth.register.UserTypeActivity"
-            android:theme="@style/Theme.HomeService.NoActionBar"/>
+            android:theme="@style/Theme.HomeService.NoActionBar" />
         <activity
             android:name=".ui.splashscreen.SplashScreenActivity"
             android:theme="@style/Theme.HomeService.NoActionBar">
@@ -48,7 +49,20 @@
             android:name=".ui.auth.register.ContactActivity"
             android:theme="@style/Theme.HomeService.NoActionBar"
             android:windowSoftInputMode="stateVisible|adjustResize" />
+        <!--
+ <service android:name=".FirebaseMessageReceiver">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
+
+        <service android:name=".FirebaseMessageReceiver">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        -->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

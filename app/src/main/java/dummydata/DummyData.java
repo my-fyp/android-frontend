@@ -31,11 +31,11 @@ public class DummyData {
     }
 
     public static void populateProblem() {
-        ProblemService.addProblem(new ProblemModel("Rajesh Hamal", R.drawable.brand_logo, "9845632541", R.drawable.cat, "This is description for offer", "21 Jan. 2021", "25 Jan, 2021"));
-        ProblemService.addProblem(new ProblemModel("Rajesh Hamal", R.drawable.brand_logo, "9845632541", R.drawable.cat, "This is description for offer", "21 Jan. 2021", "25 Jan, 2021"));
-        ProblemService.addProblem(new ProblemModel("Rajesh Hamal", R.drawable.brand_logo, "9845632541", R.drawable.cat, "This is description for offer", "21 Jan. 2021", "25 Jan, 2021"));
-        ProblemService.addProblem(new ProblemModel("Rajesh Hamal", R.drawable.brand_logo, "9845632541", R.drawable.cat, "This is description for offer", "21 Jan. 2021", "25 Jan, 2021"));
-        ProblemService.addProblem(new ProblemModel("Rajesh Hamal", R.drawable.brand_logo, "9845632541", R.drawable.cat, "This is description for offer", "21 Jan. 2021", "25 Jan, 2021"));
-        ProblemService.addProblem(new ProblemModel("Rajesh Hamal", R.drawable.brand_logo, "9845632541", R.drawable.cat, "This is description for offer", "21 Jan. 2021", "25 Jan, 2021"));
+        ProblemService.addProblem(new ProblemModel("Rajesh Hamal", R.drawable.brand_logo, "9845632541", R.drawable.homecleaner, "This is description for offer", "21 Jan. 2021", "25 Jan, 2021"));
+        ProblemService.addProblem(new ProblemModel("Rajesh Hamal", R.drawable.brand_logo, "9845632541", R.drawable.homecleaner, "This is description for offer", "21 Jan. 2021", "25 Jan, 2021"));
+        ProblemService.addProblem(new ProblemModel("Rajesh Hamal", R.drawable.brand_logo, "9845632541", R.drawable.homecleaner, "This is description for offer", "21 Jan. 2021", "25 Jan, 2021"));
+        //ProblemService.addProblem(new ProblemModel("Rajesh Hamal", R.drawable.brand_logo, "9845632541", R.drawable.cat, "This is description for offer", "21 Jan. 2021", "25 Jan, 2021"));
+        //ProblemService.addProblem(new ProblemModel("Rajesh Hamal", R.drawable.brand_logo, "9845632541", R.drawable.cat, "This is description for offer", "21 Jan. 2021", "25 Jan, 2021"));
+        //ProblemService.addProblem(new ProblemModel("Rajesh Hamal", R.drawable.brand_logo, "9845632541", R.drawable.cat, "This is description for offer", "21 Jan. 2021", "25 Jan, 2021"));
     }
 }

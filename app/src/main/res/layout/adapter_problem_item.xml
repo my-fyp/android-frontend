@@ -69,7 +69,7 @@
             android:scaleType="fitXY"
             app:layout_constraintTop_toBottomOf="@id/ivDescription"
             tools:ignore="ContentDescription"
-            tools:src="@drawable/cat" />
+            tools:src="@drawable/homecleaner" />
 
         <ImageView
             android:id="@+id/ivCall"

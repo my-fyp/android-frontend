@@ -16,7 +16,7 @@
             android:layout_height="match_parent"
             tools:itemCount="3"
             tools:listitem="@layout/adapter_problem_item"
-            tools:visibility="gone" />
+            tools:visibility="visible" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

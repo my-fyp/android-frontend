@@ -13,19 +13,48 @@ public class BookingModel {
     private boolean completedStatus;
     private boolean paidStatus;
 
-
     public BookingModel(int bookingId, Date bookingDate, Date serviceDate, int problemDescription, String serviceType, int totalPrice, boolean completedStatus, boolean paidStatus) {
         this.bookingId = bookingId;
         this.bookingDate = bookingDate;
+        this.serviceDate = serviceDate;
         this.problemDescription = problemDescription;
         this.serviceType = serviceType;
         this.totalPrice = totalPrice;
         this.completedStatus = completedStatus;
         this.paidStatus = paidStatus;
-
     }
 
+    public int getBookingId() {
+        return bookingId;
+    }
 
-    public void getBookingDescription() {
+    public Date getBookingDate() {
+        return bookingDate;
+    }
+
+    public Date getServiceDate() {
+        return serviceDate;
+    }
+
+    public int getProblemDescription() {
+        return problemDescription;
+    }
+
+    public String getServiceType() {
+        return serviceType;
+    }
+
+    public int getTotalPrice() {
+        return totalPrice;
+    }
+
+    public boolean isCompletedStatus() {
+        return completedStatus;
+    }
+
+    public boolean isPaidStatus() {
+        return paidStatus;
     }
 }
+
+

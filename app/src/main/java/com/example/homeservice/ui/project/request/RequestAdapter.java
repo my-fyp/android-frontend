@@ -48,7 +48,7 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.MyViewHo
         binding.tvSendOnDate.setText(DateFormatter.formatDate(item.getBookingDate(), "MMM dd, yyyy"));
         binding.tvPrice.setText("Not estimated yet!");
 
-        if (item.getCustomerId() == Prefs.getProfileDetails().getAccessId()) {
+        /*if (item.getCustomerId() == Prefs.getProfileDetails().getAccessId()) {
             Glide.with(context)
                     .load(item.getCustomerImage())
                     .apply(GlideOption.getPersonReqOption())
@@ -62,8 +62,7 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.MyViewHo
                     .into(binding.requestId);
             binding.tvDescription.setText(item.getCustomerName());
 
-        }
-
+        }*/
     }
 
     @Override

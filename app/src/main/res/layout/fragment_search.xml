@@ -15,7 +15,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/dp_8_x_2">
+        android:padding="@dimen/dp_8_x_2"
+        android:visibility="gone">
 
 
         <ImageView
@@ -55,9 +56,11 @@
                     android:layout_centerHorizontal="true"
                     android:fontFamily="@font/carme"
                     android:text="@string/app_name"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:visibility="gone" />
 
                 <RelativeLayout
+                    android:id="@+id/rlSearchItem"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_8_x_5"
                     android:layout_below="@id/tvAppName"
@@ -82,144 +85,24 @@
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/dp_8_x_2"
                         android:src="@drawable/ic_search" />
-
-
                 </RelativeLayout>
 
 
             </RelativeLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvServices"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_margin="10dp"
-                        android:background="@color/white"
-                        android:elevation="4dp">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/home_specialist" />
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Home_specilist"
-                        android:textAlignment="center" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_margin="10dp"
-                        android:background="@color/white"
-                        android:elevation="4dp">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_photographer" />
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/photographer"
-                        android:textAlignment="center" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_margin="10dp"
-                        android:background="@color/white"
-                        android:elevation="4dp">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_electrian" />
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/electrian"
-                        android:textAlignment="center" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_margin="10dp"
-                        android:background="@color/white"
-                        android:elevation="4dp">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_plumber" />
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/plumber"
-                        android:textAlignment="center" />
-
-
-                </LinearLayout>
-
-
-            </LinearLayout>
+                android:paddingHorizontal="@dimen/dp_4_x_3" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_8_x_5"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="20dp"
+                android:visibility="gone">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -256,7 +139,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_8_x_5"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="20dp"
+                android:visibility="gone">
 
                 <RelativeLayout
                     android:layout_width="match_parent"

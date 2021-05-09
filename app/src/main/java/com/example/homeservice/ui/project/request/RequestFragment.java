@@ -49,29 +49,33 @@ public class RequestFragment extends Fragment {
     }
 
     private void BookingRequestApiCall() {
-        shimmer.setVisibility(View.VISIBLE);
-        rvRequest.setVisibility(View.GONE);
-        BookingApi bookingApi = RetrofitInstance.getInstance(getContext()).create(BookingApi.class);
-        Call<List<BookingResponse>> call = bookingApi.getBookingRequests(Prefs.getProfileDetails().getAccessId(), Prefs.getProfileDetails().getUserType());
-        call.enqueue(new Callback<List<BookingResponse>>() {
-            @Override
-            public void onResponse(@NotNull Call<List<BookingResponse>> call, @NotNull Response<List<BookingResponse>> response) {
-                shimmer.setVisibility(View.GONE);
-                rvRequest.setVisibility(View.VISIBLE);
-                try {
-                    populateRecyclerView(response.body());
-                } catch (Exception ex) {
-                    Log.e("ResponseTag", ex.getMessage());
+        try {
+            shimmer.setVisibility(View.VISIBLE);
+            rvRequest.setVisibility(View.GONE);
+            BookingApi bookingApi = RetrofitInstance.getInstance(getContext()).create(BookingApi.class);
+            Call<List<BookingResponse>> call = bookingApi.getBookingRequests(Prefs.getProfileDetails().getAccessId(), Prefs.getProfileDetails().getUserType());
+            call.enqueue(new Callback<List<BookingResponse>>() {
+                @Override
+                public void onResponse(@NotNull Call<List<BookingResponse>> call, @NotNull Response<List<BookingResponse>> response) {
+                    shimmer.setVisibility(View.GONE);
+                    rvRequest.setVisibility(View.VISIBLE);
+                    try {
+                        populateRecyclerView(response.body());
+                    } catch (Exception ex) {
+                        Log.e("ResponseTag", ex.getMessage());
+                    }
                 }
-            }
 
-            @Override
-            public void onFailure(@NotNull Call<List<BookingResponse>> call, @NotNull Throwable t) {
-                shimmer.setVisibility(View.GONE);
-                rvRequest.setVisibility(View.VISIBLE);
-                Toast.makeText(getContext(), "Error Message: " + t.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
+                @Override
+                public void onFailure(@NotNull Call<List<BookingResponse>> call, @NotNull Throwable t) {
+                    shimmer.setVisibility(View.GONE);
+                    rvRequest.setVisibility(View.VISIBLE);
+                    Toast.makeText(getContext(), "Error Message: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            });
+        } catch (Exception ex) {
+            Log.e("ExceptionRequest", ex.getMessage());
+        }
     }
 
     private void populateRecyclerView(List<BookingResponse> bookingRequests) {

@@ -6,4 +6,9 @@ public class Constants {
 
     public static String Contact = "Constant.Contact";
     public static String UserType = "Constant.UserType";
+
+    public static String SpecialitySlug = "Constant.SpecialitySlug";
+
+    public static String VendorId = "Constant.VendorId";
+    public static String ServiceType = "Constant.ServiceType";
 }

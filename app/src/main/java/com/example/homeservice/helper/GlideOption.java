@@ -7,7 +7,7 @@ public class GlideOption {
     public static RequestOptions getRequestOption() {
         return new RequestOptions()
                 .placeholder(R.drawable.loading)
-                .error(R.drawable.ic_baseline_broken_image_24);
+                .error(R.drawable.brand_logo);
     }
 
     public static RequestOptions getPersonReqOption() {

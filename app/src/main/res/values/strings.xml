@@ -86,4 +86,7 @@
     <string name="plumber">plumber</string>
     <string name="recommendation">Recommendations</string>
     <string name="user_name">User_name</string>
+    <string name="visit_profile">Visit Profile</string>
+    <string name="book_now">Book Now</string>
+    <string name="send_request">Send Request</string>
 </resources>

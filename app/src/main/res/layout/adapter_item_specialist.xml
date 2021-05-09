@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_4_x_3"
+    android:background="@drawable/clickable_bg"
+    android:elevation="@dimen/dp_8_x_1">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="@dimen/dp_8_x_8"
+        android:layout_height="@dimen/dp_8_x_8"
+        android:layout_margin="@dimen/dp_8_x_2"
+        android:background="@drawable/bg_text_cirle"
+        android:src="@drawable/brand_logo"
+        app:layout_constraintBottom_toTopOf="@id/btnVisitProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4_x_3"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_text"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvContact"
+        app:layout_constraintStart_toEndOf="@+id/ivProfile"
+        app:layout_constraintTop_toTopOf="@id/ivProfile"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tvContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4_x_1"
+        app:layout_constraintBottom_toBottomOf="@id/ivProfile"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        tools:text="9845213645" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_8_x_2"
+        android:src="@drawable/ic_baseline_call_24"
+        app:layout_constraintBottom_toBottomOf="@id/tvContact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvName"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/btnVisitProfile"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_4_x_3"
+        android:text="@string/visit_profile"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnBookNow"
+        app:layout_constraintStart_toStartOf="@id/ivProfile"
+        app:layout_constraintTop_toBottomOf="@id/ivProfile" />
+
+    <Button
+        android:id="@+id/btnBookNow"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4_x_3"
+        android:text="@string/book_now"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/fabCall"
+        app:layout_constraintStart_toEndOf="@id/btnVisitProfile"
+        app:layout_constraintTop_toTopOf="@id/btnVisitProfile" />
+</androidx.constraintlayout.widget.ConstraintLayout>

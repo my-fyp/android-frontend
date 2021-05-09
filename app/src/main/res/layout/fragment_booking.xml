@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:itemCount="3"
-            tools:listitem="@layout/adapter_problem_item"
+            tools:listitem="@layout/adapter_booking_item"
             tools:visibility="visible" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
